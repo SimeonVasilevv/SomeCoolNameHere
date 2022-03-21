@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SomeCoolNameHere.Infrastructure.Data.Models;
 
 namespace SomeCoolNameHere.Infrastructure
 {
@@ -9,5 +10,7 @@ namespace SomeCoolNameHere.Infrastructure
             : base(options)
         {
         }
+
+        public DbSet<User> Users { get; set; }
     }
 }
